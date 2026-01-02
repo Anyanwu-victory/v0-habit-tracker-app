@@ -49,13 +49,13 @@ export function Shell({ children }: { children: React.ReactNode }) {
         {/* Sidebar */}
         <aside
           className={cn(
-            "fixed inset-y-0 left-0 z-40 w-64 transform border-r bg-background transition-transform duration-200 lg:translate-x-0 lg:static",
+            "fixed h-full left-0 z-40 w-64 transform border-r bg-background transition-transform duration-200 lg:translate-x-0 lg:static",
             isOpen ? "translate-x-0" : "-translate-x-full",
           )}
         >
           <div className="flex h-full flex-col p-6">
             <div className="mb-8 hidden items-center justify-between lg:flex">
-              <span className="text-2xl font-bold text-pink-600">Focus</span>
+              <span className="text-2xl font-bold text-pink-600"><Link href="/">Focus</Link></span>
               <Button variant="ghost" size="icon" onClick={toggleTheme}>
                 {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
               </Button>
